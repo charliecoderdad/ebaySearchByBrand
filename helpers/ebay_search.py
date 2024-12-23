@@ -39,7 +39,7 @@ def performSearch(searchTerm, brand, category=None, condition=None, saveResults=
     logging.info("Recently Sold: " + recentlySoldListingsUrl)
     logging.info("Current Listings: " + str(currentListings))
     logging.info("Sold Listings: " + str(numSoldListings))
-    logging.info("Average Sold Price: $" + format(avgSoldPrice, ".2f"))
+    logging.info("AVG Sold Price: $" + format(avgSoldPrice, ".2f"))
     logging.info("STR: " + format(sellThroughRate, ".1f") + "%")
     logging.info("*===========================================================================*")
 

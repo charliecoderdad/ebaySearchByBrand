@@ -18,24 +18,26 @@ def getAverageSoldPrice(url, numSold):
     soup = BeautifulSoup(response.content, "html.parser")
     divs = soup.find_all('li', class_="s-item", id=lambda x: x is not None and x.strip() != "")
     prices_sum = 0
-    # for div in divs:
+    prices_count = 0    
     for i in range(0, numSold):
       price = divs[i].find('span', class_="s-item__price")
       shipping = divs[i].find('span', class_="s-item__shipping")
-      if (" to " not in price):
+      logging.debug("-----> price (" + str(i) + "): " + str(price.text))
+      if (" to " not in price.text):
+        prices_count += 1
         price = extractPriceFromText(price.text)
         if (shipping is not None):
           shipping = extractPriceFromText(shipping.text)
         else:
           shipping = 0
-        logging.debug("-----> price: " + str(price))
+        # logging.debug("-----> price: " + str(price))
         logging.debug("-----> shipping: " + str(shipping))
         logging.debug("")
         prices_sum += price + shipping
-    logging.debug("Sum: " + str(prices_sum))
-    logging.debug("Count: " + str(numSold))
-  if (numSold != 0):
-    return prices_sum / numSold
+    logging.debug("prices_sum: " + str(prices_sum))
+    logging.debug("prices_count: " + str(prices_count))
+  if (prices_count != 0):
+    return prices_sum / prices_count
   else:
     return 0
 

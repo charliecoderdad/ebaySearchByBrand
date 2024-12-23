@@ -1,10 +1,10 @@
 {
-	"category": 15662,
-	"condition": "used",
+	"category": 11483,
+	"condition": "new",
 	"delayInterval": 3,
 	"exportCsvFileName": "test-template.csv",
-	"searchTerm": "mens necktie",
+	"searchTerm": "mens jeans",
 	"brands": [
-		"Endangered Species"
+		"Wrangler"
 	]
 }

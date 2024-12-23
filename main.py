@@ -10,8 +10,8 @@ import random
 import time
 import sys
 
-logging_setup.setup_logging()
 args = arge_setup.getArgs()
+logging_setup.setup_logging(verbose=args.verbose)
 
 if args.file:
   config = ConfigLoader(args.file)
