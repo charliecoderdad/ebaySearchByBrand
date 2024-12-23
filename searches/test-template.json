@@ -5,8 +5,6 @@
 	"exportCsvFileName": "test-template.csv",
 	"searchTerm": "mens necktie",
 	"brands": [
-		"Brooks Brothers",
-		"Jerry Garcia",
-		"CHANEL"
+		"Endangered Species"
 	]
 }
