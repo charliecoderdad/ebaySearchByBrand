@@ -1,11 +1,12 @@
 import logging, sys
 
-def setup_logging():
+def setup_logging(verbose=None):
 	# Set up logging configuration
+	level = logging.DEBUG if verbose else logging.INFO
 	logging.basicConfig(
 			filename='logfile.log',  # Log file name
 			# Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-			level=logging.INFO,
+			level=level,
 			format='%(asctime)s - %(levelname)s - %(message)s',  # Log format
 			datefmt='%Y-%m-%d %H:%M:%S'  # Date format
 	)
