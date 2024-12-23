@@ -1,0 +1,12 @@
+{
+	"category": 15662,
+	"condition": "used",
+	"delayInterval": 3,
+	"exportCsvFileName": "test-template.csv",
+	"searchTerm": "mens necktie",
+	"brands": [
+		"Brooks Brothers",
+		"Jerry Garcia",
+		"CHANEL"
+	]
+}

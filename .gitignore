@@ -1,0 +1,4 @@
+*.log
+test.py
+helpers/__pycache__
+*.csv
