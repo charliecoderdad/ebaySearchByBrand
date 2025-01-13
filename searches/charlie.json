@@ -1,0 +1,10 @@
+{
+	"category": 11483,
+	"condition": "used",
+	"delayInterval": 8,
+	"exportCsvFileName": "charlie.csv",
+	"searchTerm": "mens jeans",
+	"brands": [
+		"St. John's Bay"
+	]
+}

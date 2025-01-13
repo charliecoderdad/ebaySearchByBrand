@@ -13,7 +13,11 @@ def getBaseUrl(searchTerm, brand, category, condition):
     case "new":
       url += "&LH_ItemCondition=1000"
   # Have to double encode for some reason
-  brand = urllib.parse.quote(urllib.parse.quote(brand))
+  brand = urllib.parse.quote(brand)
+  brand = brand.replace(".", "%2E")
+  brand = brand.replace("-", "%2D")
+  brand = urllib.parse.quote(brand)
+  
   url += "&Brand=" + brand
   return url
 
