@@ -1,0 +1,10 @@
+{
+	"category": 185101,
+	"condition": "used",
+	"delayInterval": 8,
+	"exportCsvFileName": "test.csv",
+	"searchTerm": "mens shirt",
+	"brands": [
+		"Armani Jeans"		
+	]
+}

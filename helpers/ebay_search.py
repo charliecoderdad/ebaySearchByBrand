@@ -44,11 +44,12 @@ def performSearch(searchTerm, brand, category=None, condition=None, saveResults=
     logging.info("*===========================================================================*")
 
     object = {
-      "brand": brand,
-      "currentListings": currentListings,
-      "numSoldListings": numSoldListings,
-      "totalListedAndSold": currentListings + numSoldListings,
-      "sellThroughRate": format(sellThroughRate, ".1f"),
-      "avgSoldPrice": format(avgSoldPrice, ".2f")
+      "Brand": brand,      
+      "Rate": format(sellThroughRate / 100, ".3f"),
+      "Sold $": format(avgSoldPrice, ".2f"),
+      "Curr List": currentListings,
+      "Sold List": numSoldListings,
+      "Tot. List": currentListings + numSoldListings,
+      "Sold URL": recentlySoldListingsUrl      
     }
     return object
